@@ -22,6 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-Hello from Me 
-hello again?
+Lets do this YE YE YE
