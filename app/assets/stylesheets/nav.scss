@@ -1,0 +1,32 @@
+header {
+    background: grey;
+    padding: 20px 0 40px 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+.left-nav {
+    float: left;
+
+}
+
+.right-nav {
+    float: right;
+}
+
+.right-nav ul li {
+    display: block;
+    width: 75px;
+    padding: 0 5px;
+    float: right;
+}

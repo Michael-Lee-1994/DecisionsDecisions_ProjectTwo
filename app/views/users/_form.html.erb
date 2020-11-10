@@ -1,0 +1,41 @@
+<%= form_with(model: user, local: true) do |f| %>
+        <% if @user.errors.any? %>
+        <ul>
+            <% @user.errors.full_messages.each do |m| %>
+                <li class="errors"><%= m %></li>
+            <% end %>
+        </ul>
+        <% end %>
+
+    <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+    </div>
+
+    <%= f.fields_for :address, user.address do |address_attributes|%>
+      <%= address_attributes.label :street_name%>
+      <%= address_attributes.text_field :street_name %>
+      <%= address_attributes.label :city%>
+      <%= address_attributes.text_field :city %>
+      <%= address_attributes.label :state%>
+      <%= address_attributes.text_field :state %>
+      <%= address_attributes.label :zipcode%>
+      <%= address_attributes.text_field :zipcode %>
+      <%= address_attributes.label :country%>
+      <%= address_attributes.text_field :country %>
+    <% end %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+    
+<% end %>
+  
+
