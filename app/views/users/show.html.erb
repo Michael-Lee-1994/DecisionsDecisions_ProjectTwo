@@ -1,0 +1,25 @@
+<h1>Welcome, <%= @user.to_s %></h1>
+
+<table>
+  <tr>
+    <th>Activity Name</th>
+    <th>Date</th>
+    <th>Completed?</th>
+  </tr>
+<% @user.choices.each do |ch|%>
+  <tr>
+    <td><%=link_to ch.choice_name, ch %></td>
+    <td><%=ch.date%></td>
+    <td>
+        <%if ch.completed == false%>
+        <input type="checkbox">
+        <% else %>
+        <input checked>
+        <% end %>
+
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<button><%=link_to "Make a choice", new_choice_path %></button>

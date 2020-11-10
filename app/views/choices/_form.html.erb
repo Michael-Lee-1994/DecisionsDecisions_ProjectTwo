@@ -1,0 +1,19 @@
+<%= form_with model:@choice, local: true do |f| %>
+<% if @choice.errors.any? %>
+    <ul>
+        <% @choice.errors.full_messages.each do |m|%>
+            <li class="danger"><%= m %></li>
+        <% end%>
+    </ul>
+<% end %>
+    <%= f.label :choice_name %>
+    <%= f.text_field :choice_name %>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    <%= f.label :location_zip %>
+    <%= f.text_field :location_zip %>
+
+    <%= f.submit %>
+<% end %>

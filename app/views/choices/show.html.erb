@@ -1,0 +1,24 @@
+<h1><%= @choice.choice_name %></h1>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Genre/Cuisine</th>
+        <th>Completed?</th>
+    </tr>
+    <tr>
+        <td><%=@choice.date%></td>
+        <% @choice.choice_activities.map do |c|%>
+            <td><%= c.activity.category %></td>
+            <td><%= c.activity.genre_cuisine %></td>
+        <% end %>
+        <td>
+            <%if @choice.completed == false%> 
+            <input type="checkbox"> 
+            <% else %>
+            <input checked> 
+            <% end %>
+        </td>
+    </tr>
+</table>

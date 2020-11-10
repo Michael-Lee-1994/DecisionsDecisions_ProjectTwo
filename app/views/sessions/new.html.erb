@@ -1,0 +1,17 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login_body">    
+        <h1 id="login_header">Login page</h1>
+
+        <%= form_with url:'/sessions',id: 'login_form', method: :post do |form| %>
+            <%= form.label :username %>
+            <%= form.text_field :username %>
+            <%= form.label :password %>
+            <%= form.password_field :password %>
+            <%= form.submit "Login"%>
+        <% end %>
+    </div>
+</body>
