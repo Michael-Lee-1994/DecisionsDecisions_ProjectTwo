@@ -1,6 +1,6 @@
 header {
-    background: grey;
-    padding: 20px 0 40px 0;
+    background:  #56baed;
+    padding: 20px 10px;
 
     ul {
         margin: 0;
@@ -17,16 +17,18 @@ header {
 
 .left-nav {
     float: left;
-
+    max-width: 600px;
+    width: 60%;
 }
 
 .right-nav {
     float: right;
+    width: 40%;
 }
 
 .right-nav ul li {
     display: block;
-    width: 75px;
+    min-width: 75px;
     padding: 0 5px;
     float: right;
 }
