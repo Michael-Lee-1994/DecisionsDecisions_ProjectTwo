@@ -36,3 +36,15 @@ header {
     color: azure;
     margin: 12px 15px 25px 0px;
 }
+
+#sign_up_btn:hover {
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -webkit-transition: all .25s;
+}
