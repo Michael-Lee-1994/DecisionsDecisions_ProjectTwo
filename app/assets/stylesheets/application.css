@@ -33,7 +33,7 @@
 }
 
 body {
-    background-color: rgb(171, 230, 212);
+    background-color: rgb(1, 220, 187);
 }
 
 h1 {
@@ -42,7 +42,7 @@ h1 {
 }
 
 #welcome_header {
-    font-family: "Knewave", serif;
+    font-family: "Fascinate";
     font-color: rgb(36, 32, 31);
     text-align: center;
 }
