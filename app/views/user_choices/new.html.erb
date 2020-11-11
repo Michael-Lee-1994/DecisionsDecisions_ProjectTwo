@@ -1,5 +1,6 @@
-<h1>Make a Choice: </h1>
+<h1>Create new event: </h1>
 
+<<<<<<< HEAD
 <%= form_for @user_choice do |f|%>
 
     <%= f.label :user %>
@@ -14,3 +15,6 @@
     <%= f.submit%>
 <% end %>
 <button><%=link_to "Back to Profile", user_path(current_user) %></button>
+=======
+<%= render 'form', user_choice: @user_choice %>
+>>>>>>> c86efcad54abd45d94be641ee43e2db0296eaefd

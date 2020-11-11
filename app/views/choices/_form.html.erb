@@ -1,4 +1,4 @@
-<%= form_with model:@choice, local: true do |f| %>
+<%= form_with model: choice, local: true do |f| %>
 <% if @choice.errors.any? %>
     <ul>
         <% @choice.errors.full_messages.each do |m|%>
