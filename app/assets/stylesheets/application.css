@@ -47,7 +47,7 @@ h1 {
     text-align: center;
 }
 
-#login_header {
+#login_header, #signup_header {
     margin: 20px;
     font-family: Abril Fatface;
     text-align: center;
@@ -109,7 +109,7 @@ html {
     padding: 20px;
   }
   
-  #formContent, .login_body {
+  #formContent, .login_body, .signup_body {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
