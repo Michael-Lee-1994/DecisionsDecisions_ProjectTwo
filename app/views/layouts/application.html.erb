@@ -25,19 +25,19 @@
   <% end %>
 
   <% if logged_in? %>
-    <%= button_to 'Logout', sessions_path, method: :delete %>
+    <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
   <% else%>
   <header class='clearfix'>
-  <div class="left-nav">
-  <h1 id="welcome_header">DECISIONS DECISIONS</h1>
-  </div>
-  <div class="right-nav">
-  <ul>
-  <li><%= link_to 'Sign Up', new_user_path %></li>
-  <li><%= link_to 'Log In', login_path %></li>
-    </ul>
+    <div class="left-nav">
+      <h1 id="welcome_header">DECISIONS DECISIONS</h1>
     </div>
-</header>
+    <div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><%= link_to 'Sign Up', new_user_path, class:"btn btn-warning", id:"sign_up_btn" %></li>
+        <li class="nav-item"><%= link_to 'Log In', login_path, class:"btn btn-warning", id:"log_in_btn" %></li>
+      </ul>
+    </div>
+  </header>
   <% end %>
 
   <body>

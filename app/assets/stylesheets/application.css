@@ -32,19 +32,40 @@
     color: green;
 }
 
+
+
 body {
-    background-color: rgb(1, 220, 187);
+    background-color: rgb(247, 247, 247);
 }
 
 h1 {
+    font-size: 60px;
     font-family: Fascinate;
+    margin-left: 20px;
     font-color: rgb(53, 47, 45);
 }
 
 #welcome_header {
-    font-family: Fascinate;
-    font-color: rgb(36, 32, 31);
     text-align: center;
+    font-family: 'Knewave', cursive;
+    font-color: rgb(36, 32, 31);
+
+}
+#landing_content {
+    width: 60%;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0.50, 0.50, 0.50, 0.50), 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+#home_p {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Kalam';
+}
+
+#home_banner{
+    text-align: center;
+    font-family: 'Knewave', cursive;
 }
 
 #login_header, #signup_header {

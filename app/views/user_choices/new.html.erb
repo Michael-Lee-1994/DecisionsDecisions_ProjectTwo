@@ -1,15 +1,3 @@
-<h1>Make a Choice: </h1>
+<h1>Create new event: </h1>
 
-<%= form_for @user_choice do |f|%>
-
-    <%= f.label :user %>
-    <%= f.collection_select :user_id, User.all, :id, :first_name %><br>
-    <%# <%= @user_choice.user.first_name %>
-    <%= f.hidden_field :user_id %>
-    <%# need to render current user's name instead of drop down here.%>
-
-    <%= f.label :choice%>
-    <%= f.collection_select :choice_id, Choice.all, :id, :choice_name%><br>
-
-    <%= f.submit%>
-<% end %>
+<%= render 'form', user_choice: @user_choice %>
