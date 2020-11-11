@@ -1,17 +1,18 @@
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-</head>
 
-<body>
+<div class="wrapper fadeInDown">
     <div class="login_body">    
-        <h1 id="login_header">Login page</h1>
+        <h1 id="login_header">Log In</h1>
+
+        <div class="fadeIn first">
+      <img src="https://www.pngkey.com/png/detail/367-3670351_access-login-icon.png" id="icon" alt="User Icon" />
+    </div>
 
         <%= form_with url:'/sessions',id: 'login_form', method: :post do |form| %>
-            <%= form.label :username %>
-            <%= form.text_field :username %>
-            <%= form.label :password %>
-            <%= form.password_field :password %>
-            <%= form.submit "Login"%>
+            
+            <%= form.text_field :username, placeholder: "username", :html => {:class => "fadeIn second"} %>
+            
+            <%= form.password_field :password, placeholder: "password", :html => {:class => "fadeIn third"} %>
+            <%= form.submit "Log In", :html => {:class => "fadeIn fourth"} %>
         <% end %>
     </div>
-</body>
+</div>
