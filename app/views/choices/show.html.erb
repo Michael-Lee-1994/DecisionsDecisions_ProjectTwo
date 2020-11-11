@@ -10,6 +10,7 @@
     <tr>
         <td><%=@choice.date%></td>
         <% @choice.choice_activities.map do |c|%>
+            <td><%= c.activity.name.capitalize %></td>
             <td><%= c.activity.category.capitalize %></td>
             <td><%= c.activity.genre_cuisine.capitalize %></td>
         <% end %>
