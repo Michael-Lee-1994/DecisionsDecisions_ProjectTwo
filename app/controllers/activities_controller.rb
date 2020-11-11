@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
     end
 
     def new
-        byebug
+        # byebug
         @activity = Activity.new
     end
 
@@ -59,7 +59,7 @@ class ActivitiesController < ApplicationController
         if type == "food"
             activity = Activity.where("category LIKE ?", "food").sample
         elsif type == "movie"
-            activity = Activity.where("type LIKE ?", "movie").sample
+            activity = Activity.where("category LIKE ?", "movie").sample
         else
             activity = Activity.find(Random.new(100))
         end 
