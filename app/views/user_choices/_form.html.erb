@@ -8,9 +8,7 @@
     <% end %>
     <%# <% byebug %>
         <%= f.collection_select :user_id, User.all, :id,:username%>
-        <%= f.collection_select :choice_id, Choice.all, :id,:choice_name%>
-        <%# <%= f.label Choice.last.choice_name %>
-        <%# <%= f.hidden_field :choice_id %><br> 
+        <%= f.collection_select :choice_id, Choice.all, :id,:choice_name%>><br> 
     <div>
         <%= f.submit value: 'Submit'%>
     </div>
