@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: [:new, :create]
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
-
     def index
         # if params[:all]
         #     @users = User.all
@@ -17,7 +16,6 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
-        # @user.addresses.build
     end
 
     def create
