@@ -12,6 +12,7 @@ class ChoicesController < ApplicationController
     def create
         @choice = current_user.choices.create(choice_params)
         if @choice.save
+            session[:choice_id] = @choice.id
             redirect_to activities_path
         else
             render :new
