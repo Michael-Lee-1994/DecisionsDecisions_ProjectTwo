@@ -3,23 +3,34 @@
 <table>
     <tr>
         <th>Date</th>
-        <th>Category</th>
-        <th>Genre/Cuisine</th>
-        <th>Completed?</th>
     </tr>
     <tr>
         <td><%=@choice.date%></td>
+        <%# byebug %>
         <% @choice.choice_activities.map do |c|%>
-            <td><%= c.activity.category.capitalize %></td>
-            <td><%= c.activity.genre_cuisine.capitalize %></td>
+            <tr>
+                <th>Activity Name</th>
+                <th>Category</th>
+                <% if c.activity.category == "food" %>
+                    <th>Cuisine</th>
+                    <% else %>
+                    <th>Genre</th>
+                <% end %>
+                <th>Completed?</th>
+            </tr>
+            <tr>
+                <td><%= c.activity.name.capitalize %></td>
+                <td><%= c.activity.category.capitalize %></td>
+                <td><%= c.activity.genre_cuisine.capitalize %></td>
+                <td>
+                    <% if @choice.completed == true %>
+                        <input type="checkbox" checked>
+                    <% else %>
+                        <input type="checkbox">
+                    <% end %>
+                </td>
+            </tr>
         <% end %>
-        <td>
-        <% if @choice.completed == true %>
-            <input type="checkbox" checked>
-        <% else %>
-            <input type="checkbox">
-        <% end %>
-        </td>
     </tr>
 </table>
 
