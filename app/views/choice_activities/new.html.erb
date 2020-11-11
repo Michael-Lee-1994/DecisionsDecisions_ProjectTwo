@@ -1,0 +1,14 @@
+<h1>Make a Choice: </h1>
+
+<%= form_for @user_choice do |f|%>
+
+    <%= f.label :user%>
+    <%= f.collection_select :user_id, User.all, :id, :first_name%><br>
+
+    <%= f.label :choice%>
+    <%= f.collection_select :choice_id, Choice.all, :id, :choice_name%><br>
+
+    <%= f.submit%>
+<% end %>
+<br>
+<button><%=link_to "Back to Profile", user_path(current_user) %></button>
