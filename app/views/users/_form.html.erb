@@ -16,6 +16,7 @@
         <%= f.text_field :username %>
         <%= f.label :password %>
         <%= f.password_field :password %>
+        <%= f.submit %>
     </div>
 
     <%= f.fields_for :address, user.address do |address_attributes|%>
