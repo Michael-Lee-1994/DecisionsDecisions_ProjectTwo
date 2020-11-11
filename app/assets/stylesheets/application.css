@@ -42,7 +42,7 @@ h1 {
 }
 
 #welcome_header {
-    font-family: "Abril Fatface", serif;
+    font-family: "Knewave", serif;
     font-color: rgb(36, 32, 31);
     text-align: center;
 }
@@ -64,13 +64,13 @@ h1 {
 
 
 
-
+/* Everything below this is for the Log In and Sign Up pages animation. */
 
 
 /* BASIC */
 
 html {
-    background-color: #56baed;
+    background-color: rgb(149, 181, 54);
   }
   
   body {
