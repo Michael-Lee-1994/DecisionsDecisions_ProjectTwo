@@ -9,15 +9,15 @@ body {
   }
 
 #main {
+    height: 100%;
     padding: 60px 45px 20px 360px;
     background-color: #f1f1f1;
     margin: 0px;
     border-style: solid;
     border-width: 0px 100px 0px 0px;
     border-color: #004345;
-    height: 100%;
   }
-  
+
 .sidenav {
     height: 100%;
     width: 300px;
@@ -40,17 +40,34 @@ body {
     font-family: 'Knewave', cursive;
     text-align:center;
    }
+
   .sidenav a {
     padding: 10px;
-    
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     display: block;
     font-family: Oswald;
   }
 
-  .sidenav a:hover {
-    color: #004b50;
-    
+  .sidenav button:hover {
+    background-color: #0d4f35;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -webkit-transition: all .25s;
+  }
+
+  .btn {
+    background-color: #1f3229;
+    border-radius: 20px;
+  }
+
+  #user_welcome_name {
+    font-family: 'Abril Fatface', cursive;
   }

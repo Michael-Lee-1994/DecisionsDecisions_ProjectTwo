@@ -32,6 +32,14 @@
     color: green;
 }
 
+#logout_btn{
+    float: right;
+    margin-top: 10px;
+    margin-right: 110px;
+  
+}
+
+
 body {
     background-color: rgb(247, 247, 247);
 }
