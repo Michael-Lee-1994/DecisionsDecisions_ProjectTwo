@@ -4,15 +4,13 @@ class ChoicesController < ApplicationController
     end
 
     def new
-        @choice = Choice.new
+        @choice = current_user.choices.build
     end
 
     def create
-        # byebug
-        @choice = Choice.new(choice_params)
+        @choice = current_user.choices.create(choice_params)
         if @choice.save
-            session[:choice_id] = @choice.id
-            redirect_to new_user_choice_path
+            redirect_to activities_path
         else
             render :new
         end

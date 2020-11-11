@@ -5,7 +5,6 @@ class ChoiceActivitiesController < ApplicationController
 
     def create
         @choice_activity = ChoiceActivity.new(ca_params)
-        # @choice_activity.user = current_user
         if @choice_activity.save
             session[:choice_activity_id] = @choice_activity.id
             redirect_to @choice_activity.choice
