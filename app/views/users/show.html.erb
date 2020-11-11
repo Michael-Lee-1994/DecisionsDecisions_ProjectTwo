@@ -1,3 +1,14 @@
+<body>
+<nav id="navbar" class="sidenav"> 
+    <header> DECISIONS DECISIONS </header>
+    <br>
+    <ul>
+     <button class="btn btn-dark"><%=link_to "Make a choice", new_choice_path %></button>
+      
+    </ul>
+</nav>
+
+<div id="main">
 <h1>Welcome, <%= @user.to_s %></h1>
 
 <table>
@@ -22,4 +33,6 @@
 <% end %>
 </table>
 
-<button><%=link_to "Make a choice", new_choice_path %></button>
+
+</div>
+</body>
