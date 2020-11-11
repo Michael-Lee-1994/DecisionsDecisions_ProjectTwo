@@ -10,15 +10,18 @@
     <tr>
         <td><%=@choice.date%></td>
         <% @choice.choice_activities.map do |c|%>
-            <td><%= c.activity.category %></td>
-            <td><%= c.activity.genre_cuisine %></td>
+            <td><%= c.activity.category.capitalize %></td>
+            <td><%= c.activity.genre_cuisine.capitalize %></td>
         <% end %>
         <td>
-            <%if @choice.completed == false%> 
-            <input type="checkbox"> 
-            <% else %>
-            <input checked> 
-            <% end %>
+        <% if @choice.completed == true %>
+            <input type="checkbox" checked>
+        <% else %>
+            <input type="checkbox">
+        <% end %>
         </td>
     </tr>
 </table>
+
+<button><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
+<button><%= link_to 'Back', user_path(current_user) %></button>

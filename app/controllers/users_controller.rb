@@ -2,29 +2,27 @@ class UsersController < ApplicationController
     skip_before_action :authorized, only: [:new, :create]
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
-
     def index
-        if params[:all]
-            @users = User.all
-        else
-            @users = User.where(user_id: params[:user_id])
-        end
+        # if params[:all]
+        #     @users = User.all
+        # else
+        #     @users = User.where(user_id: params[:user_id])
+        # end
+        @users = User.all
     end
 
     def show
-
     end
 
     def new
         @user = User.new
-        # @user.addresses.build
     end
 
     def create
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to user_path(@user)
+            redirect_to @user, notice: 'Account was successfully created.'
         else
             render :new
         end
@@ -34,9 +32,16 @@ class UsersController < ApplicationController
     end
 
     def update
+        if @user.update(user_params)
+            redirect_to @user, notice: 'Account was successfully updated.'
+        else
+            render 'edit'
+        end
     end
     
     def destroy
+        @user.destroy
+        redirect_to login_path, notice: 'Account was successfully deleted.'
     end
 
     private 

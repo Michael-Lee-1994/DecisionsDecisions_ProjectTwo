@@ -5,6 +5,7 @@ class UserChoicesController < ApplicationController
             @user_choice = @user.user_choices.build
         else
             @user_choice = current_user.user_choices.build
+            @user_choice.choice
         end
     end
 
@@ -12,8 +13,7 @@ class UserChoicesController < ApplicationController
         # byebug
         @user_choice = UserChoice.new(uc_params)
         if @user_choice.save
-            # session[:user_choice_id] = @user_choice.id
-            redirect_to @user_choice.user
+            redirect_to user_path(current_user)
         else
             render 'new'
         end
