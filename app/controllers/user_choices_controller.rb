@@ -7,7 +7,6 @@ class UserChoicesController < ApplicationController
             @user_choice = current_user.user_choices.build
             @user_choice.choice
         end
-        # @user_choice = UserChoice.new
     end
 
     def create

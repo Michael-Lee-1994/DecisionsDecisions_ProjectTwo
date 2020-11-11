@@ -12,5 +12,13 @@ class User < ApplicationRecord
   def to_s
     self.first_name.capitalize + " " + self.last_name.capitalize
   end
+
+  def complete
+      self.chocies.where(complete: true)
+  end
+
+  def incomplete
+      self.choices.where(complete: false)
+  end
   
 end
