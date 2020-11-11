@@ -4,26 +4,17 @@
   <tr>
     <th>Choice Name</th>
     <th>Date</th>
-    <th>Completed?</th>
   </tr>
 <% @user.choices.each do |ch|%>
   <tr>
     <td><%=link_to ch.choice_name, ch %></td>
     <td><%=ch.date%></td>
-    <td>
-        <%if ch.completed == false%>
-        <input type="checkbox">
-        <% else %>
-        <input checked>
-        <% end %>
-
-    </td>
   </tr>
 <% end %>
 </table>
 
 <button><%=link_to "Create an event", new_choice_path %></button><br>
 <button><%= link_to "Edit account", edit_user_path(@user) %></button>
-<%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Do you really want to delete?' } %>
+<%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' } %>
 
 

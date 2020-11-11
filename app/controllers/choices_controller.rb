@@ -1,4 +1,6 @@
 class ChoicesController < ApplicationController
+    before_action :get_choice, only: [:show, :edit, :update]
+
     def show
         @choice = Choice.find(params[:id])
     end
@@ -16,7 +18,20 @@ class ChoicesController < ApplicationController
         end
     end
 
+    def edit
+    end
+
+    def update
+        @choice.update(choice_params)
+        redirect_to @choice, notice: 'Choice was successfully updated.'
+    end
+
     private
+
+    def get_choice
+        @choice = Choice.find(params[:id])
+    end
+
     def choice_params
         params.require(:choice).permit(:choice_name, :date, :completed, :location_zip)
     end
