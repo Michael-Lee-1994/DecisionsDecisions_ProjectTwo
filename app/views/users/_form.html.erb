@@ -1,0 +1,23 @@
+<%= form_with(model: user, local: true) do |f| %>
+        <% if @user.errors.any? %>
+        <ul>
+            <% @user.errors.full_messages.each do |m| %>
+                <li class="errors"><%= m %></li>
+            <% end %>
+        </ul>
+        <% end %>
+
+    <div>
+        <%= f.text_field :first_name, placeholder: "First Name", :html => {:class => "fadeIn"} %>
+        <%= f.text_field :last_name, placeholder: "Last Name", :html => {:class => "fadeIn"} %>
+        <%= f.text_field :username, placeholder: "Username", :html => {:class => "fadeIn"} %>
+        <%= f.password_field :password, placeholder: "Password", :html => {:class => "fadeIn"} %>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+
+  </div>
+    
+<% end %>
+  
+

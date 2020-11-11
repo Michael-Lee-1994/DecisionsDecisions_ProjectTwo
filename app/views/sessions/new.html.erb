@@ -1,0 +1,18 @@
+
+<div class="wrapper fadeInDown">
+    <div class="login_body">    
+        <h1 id="login_header">Log In</h1>
+
+        <div class="fadeIn first">
+      <img src="https://www.pngkey.com/png/detail/367-3670351_access-login-icon.png" id="icon" alt="User Icon" />
+    </div>
+
+        <%= form_with url:'/sessions',id: 'login_form', method: :post do |form| %>
+            
+            <%= form.text_field :username, placeholder: "username", :html => {:class => "fadeIn second"} %>
+            
+            <%= form.password_field :password, placeholder: "password", :html => {:class => "fadeIn third"} %>
+            <%= form.submit "Log In", :html => {:class => "fadeIn fourth"} %>
+        <% end %>
+    </div>
+</div>

@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectTwo</title>
+    <title>Decisions Decisions</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    
+    </head>
+
+  <% flash.each do |k, v|  %>
+    <p class="<%= k %>"><%= v %></p>
+  <% end %>
+
+  <% if logged_in? %>
+    <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
+  <% else%>
+  <header class='clearfix'>
+    <div class="left-nav">
+      <h1 id="welcome_header">DECISIONS DECISIONS</h1>
+    </div>
+    <div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item"><%= link_to 'Sign Up', new_user_path, class:"btn btn-warning", id:"sign_up_btn" %></li>
+        <li class="nav-item"><%= link_to 'Log In', login_path, class:"btn btn-warning", id:"log_in_btn" %></li>
+      </ul>
+    </div>
+  </header>
+  <% end %>
 
   <body>
     <%= yield %>

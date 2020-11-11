@@ -1,0 +1,15 @@
+<%= form_with(model: user_choice, local: true) do |f| %>
+    <% if @user_choice.errors.any? %>
+        <ul>
+            <% @user_choice.errors.full_messages.each do |m|%>
+                <li class="danger"><%= m %></li>
+            <% end%>
+        </ul>
+    <% end %>
+        <%= f.collection_select :user_id, User.all, :id,:username%>
+        <%= f.collection_select :choice_id, Choice.all, :id,:choice_name%>><br> 
+    <div>
+        <%= f.submit value: 'Submit'%>
+    </div>
+
+<% end %>
