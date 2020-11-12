@@ -32,7 +32,9 @@
     color: green;
 }
 
-
+a:link {
+    text-decoration: none;
+}
 
 body {
     background-color: rgb(247, 247, 247);

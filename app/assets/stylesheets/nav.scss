@@ -8,7 +8,7 @@ header {
         list-style-type: none;
     }
 
-    a {
+    a, a:active, a:hover {
         text-decoration: none;
         font-weight: bold;
         color: white;
