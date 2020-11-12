@@ -20,6 +20,12 @@
     display: table;
 }
 
+.flash{
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+}
+
 .errors {
     color: red
 }
@@ -37,8 +43,7 @@
 
 body {
     background-color: rgb(247, 247, 247);
-    height: 250vh;
-
+    height: 100%;
 }
 
 h1 {
@@ -54,14 +59,20 @@ h1 {
     font-size: 50px;
     font-family: 'Knewave', cursive;
     font-color: rgb(36, 32, 31);
-
 }
+
 #landing_content {
-    width: 60%;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 70%;
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0px 0px 10px rgba(0.50, 0.50, 0.50, 0.50), 0 6px 6px rgba(0, 0, 0, 0.25);
 }
+
 #home_p {
     text-align: center;
     font-size: 25px;
@@ -81,7 +92,9 @@ h1 {
 
 #logout_btn {
   display: block;
+  margin-top: 15px;
   float: right;
+  background-color: mediumvioletred;
 }
 
 
@@ -348,4 +361,11 @@ html {
 
   #icon {
     width:60%;
+  }
+
+  #foot-note {
+    font-size: 12px;
+    line-height: 3px;
+    text-align: center;
+    margin: 350px -15px -20px -10px;
   }

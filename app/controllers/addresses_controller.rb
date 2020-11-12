@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
-    before_action :get_address, only: [:edit, :update]
+    skip_before_action :authorized, only: [:new, :create]
+    before_action :get_address, only: [:show, :edit, :update, :destroy]
+  
     def new
         @address = Address.new
     end
@@ -29,6 +31,7 @@ class AddressesController < ApplicationController
     end
 
     private
+
     def get_address
         @address = Address.find(params[:id])
     end
@@ -36,4 +39,5 @@ class AddressesController < ApplicationController
     def address_params
         params.require(:address).permit(:street_name, :city, :state, :zipcode, :country)
     end
+
 end

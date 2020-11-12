@@ -1,17 +1,26 @@
-<%= form_with model:activity, local: true do |f| %>
-<% if @activity.errors.any? %>
-    <ul>
-        <% @activity.errors.full_messages.each do |m|%>
-            <li class="danger"><%= m %></li>
-        <% end%>
-    </ul>
-<% end %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :category %>
-    <%= f.text_field :category, placeholder: "food/movie" %>
-    <%= f.label :genre_cuisine %>
-    <%= f.text_field :genre_cuisine %>
 
-    <%= f.submit %>
-<% end %>
+<div class="form">
+    <%= form_with model:activity, local: true do |f| %>
+    <% if @activity.errors.any? %>
+        <ul>
+            <% @activity.errors.full_messages.each do |m|%>
+                <li class="danger"><%= m %></li>
+            <% end%>
+        </ul>
+    <% end %>
+        <%= f.label :name %>
+        <br>
+        <%= f.text_field :name %>
+        <br>
+        <%= f.label :category %>
+        <br>
+        <%= f.text_field :category %>
+        <br>
+        <%= f.label :genre_cuisine %>
+        <br>
+        <%= f.text_field :genre_cuisine %>
+        <br>
+  
+        <%= f.submit %>
+    <% end %>
+</div>

@@ -19,7 +19,9 @@
     </head>
 
   <% flash.each do |k, v|  %>
+    <div class="flash">
     <p class="<%= k %>"><%= v %></p>
+    </div>
   <% end %>
 
   <% if logged_in? %>
@@ -42,3 +44,5 @@
     <%= yield %>
   </body>
 </html>
+
+
