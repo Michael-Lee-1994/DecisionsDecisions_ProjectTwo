@@ -74,7 +74,7 @@ body {
 .sidenav ul {
   padding-inline-start: 0px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 5%;
   text-decoration: none;
 }
 
@@ -100,13 +100,26 @@ body {
   font-family: 'Abril Fatface', cursive;
 }
 
-#delete_account{
+#delete_account {
   background-color: rgb(199, 21, 134);
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px rgba(87, 173, 216, 0.605);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 150px 20px 40px 10px;
+  margin: 15% 10% 10% 10%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#add_address_btn{
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -142,4 +155,17 @@ body {
 
 #edit_user_header {
   font-family: 'Abril Fatface', cursive;
+}
+
+#edit_address_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

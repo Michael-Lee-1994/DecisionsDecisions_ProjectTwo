@@ -1,3 +1,7 @@
-<h1>Edit a Address</h1>
+<div id="edit_address_body">
+    <h1 id="edit_header">Edit a Address</h1>
 
-<%= render 'form', address: @address %>
+    <%= render 'form', address: @address %>
+
+    <button class="back-to-user"><%=link_to "Back to Profile", user_path(current_user) %></button>
+</div>
