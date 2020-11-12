@@ -16,6 +16,7 @@ class ActivitiesController < ApplicationController
             @activity = current_choice.choice_activities.create(activity_id: get_random("food").id)
             if @activity.save
                 redirect_to activities_path
+                flash[:success] = "Succesfully added #{@activity.activity.name}"
             else
                 render :new
             end
@@ -23,6 +24,7 @@ class ActivitiesController < ApplicationController
             @activity = current_choice.choice_activities.create(activity_id: get_random("movie").id)
             if @activity.save
                 redirect_to activities_path
+                flash[:success] = "Succesfully added #{@activity.activity.name}"
             else
                 render :new
             end
@@ -30,6 +32,7 @@ class ActivitiesController < ApplicationController
             @activity = current_choice.activities.create(activity_params)
             if @activity.save
                 redirect_to user_path(current_user)
+                flash[:success] = "Succesfully added #{@activity.name}"
             else
                 render :new
             end

@@ -10,7 +10,6 @@ class UserChoicesController < ApplicationController
     end
 
     def create
-        # byebug
         @user_choice = UserChoice.new(uc_params)
         if @user_choice.save
             redirect_to user_path(current_user)

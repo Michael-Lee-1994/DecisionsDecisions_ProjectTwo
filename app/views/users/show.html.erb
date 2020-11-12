@@ -1,10 +1,18 @@
-<body>
 <nav id="navbar" class="sidenav"> 
     <header> DECISIONS DECISIONS </header>
     <br>
     <ul>
-      <button class="btn btn-dark"><%=link_to "Make a choice", new_choice_path %></button>
-      <button class="btn btn-dark"><%= link_to "Edit account", edit_user_path(@user) %></button>
+      <button class="btn btn-dark" id="make_choice_btn"><%=link_to "Make a choice", new_choice_path %></button>
+
+      <button class="btn btn-dark" id="edit_account_btn"><%= link_to "Edit account", edit_user_path(@user) %></button>
+
+      <button class="btn btn-dark"><%= link_to "Add Address", new_address_path %></button><br>
+      
+    <% if @user.address %>
+      <button class="btn btn-dark"><%= link_to "Edit an Address", edit_address_path(@user.address_id) %></button>
+    <% end %>
+
+      <%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_account"%>      
     </ul>
 </nav>
 
@@ -15,16 +23,19 @@
   <tr>
     <th>Choice Name</th>
     <th>Date</th>
+    <th>Completed?</th>
   </tr>
 <% @user.choices.each do |ch|%>
   <tr>
     <td><%=link_to ch.choice_name, ch %></td>
     <td><%=ch.date%></td>
+    <td>
+      <% if ch.completed == true %>
+          <%= "Yes" %>
+      <% else %>
+          <%= "No" %>
+      <% end %>
+    </td>
   </tr>
 <% end %>
 </table>
-
-
-<%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' } %>
-
-

@@ -1,15 +1,32 @@
-<h1><%= @choice.choice_name %></h1>
+<div id="choice_show_main">
+    <h1 id="choice_name_header"><%= @choice.choice_name %></h1>
 
-<table>
-    <tr>
-        <th>Date</th>
-    </tr>
-    <tr>
-        <td><%=@choice.date%></td>
-        <%# byebug %>
+    <table>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Completed?</th>
+        </tr>
+        <tr class="table table-hover">
+            <td><%=@choice.date%></td>
+               <td>
+            <% if @choice.completed == true %>
+                <%= "Yes" %>
+            <% else %>
+                <%= "No" %>
+            <% end %>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-hover table-sm">
+        <br>
         <% @choice.choice_activities.map do |c|%>
-            <tr>
-                <th>Activity Name</th>
+            <tr class="table-info">
+                <% if c.activity.category == "food" %>
+                    <th>Restaurant</th>
+                    <% else %>
+                    <th>Movie name</th>
+                <% end %>
                 <th>Category</th>
                 <% if c.activity.category == "food" %>
                     <th>Cuisine</th>
@@ -22,17 +39,11 @@
                 <td><%= c.activity.name.capitalize %></td>
                 <td><%= c.activity.category.capitalize %></td>
                 <td><%= c.activity.genre_cuisine.capitalize %></td>
-                <td>
-                    <% if @choice.completed == true %>
-                        <input type="checkbox" checked>
-                    <% else %>
-                        <input type="checkbox">
-                    <% end %>
-                </td>
             </tr>
         <% end %>
-    </tr>
-</table>
-
-<button><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
-<button><%= link_to 'Back', user_path(current_user) %></button>
+    </table>
+    <br>
+    <button class="btn btn-dark" id="update_choice"><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
+    <br>
+    <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
+</div>
