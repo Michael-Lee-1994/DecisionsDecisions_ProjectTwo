@@ -5,7 +5,7 @@ body {
     padding-top: 0px;
     margin-top: 0px;
     display: block;
-    height: 200vh;
+    height: 100%;
   }
 
 #main {
@@ -20,19 +20,20 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 300px;
+    width: 280px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #bbe950;
     overflow-x: hidden;
-    padding-top: 40px;
-    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sidenav header {
-    padding: 6px 8px 6px 8px;
+    margin-top: 45px;
+    padding-top: 10px;
     text-decoration: none;
     font-size: 50px;
     color: black;
@@ -42,12 +43,18 @@ body {
    }
 
   .sidenav a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 20px;
+    padding: 8px;
+    font-size: 22px;
     color: white;
     display: block;
-    font-family: Oswald;
+    font-family: Kalam;
+  }
+
+  .sidenav ul {
+    padding-inline-start: 0px;
+    text-align: center;
+    margin-top: 60px;
+    text-decoration: none;
   }
 
   .sidenav button:hover {
@@ -71,3 +78,44 @@ body {
   #user_welcome_name {
     font-family: 'Abril Fatface', cursive;
   }
+
+  #delete_account{
+    background-color: rgb(199, 21, 134);
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px rgba(87, 173, 216, 0.605);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 200px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#make_choice_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit_account_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+

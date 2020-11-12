@@ -36,7 +36,7 @@
 
 body {
     background-color: rgb(247, 247, 247);
-    height: 250vh;
+    height: 100%;
 
 }
 
@@ -80,7 +80,9 @@ h1 {
 
 #logout_btn {
   display: block;
+  margin-top: 15px;
   float: right;
+  background-color: mediumvioletred;
 }
 
 
