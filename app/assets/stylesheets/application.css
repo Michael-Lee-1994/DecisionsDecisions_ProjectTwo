@@ -126,8 +126,8 @@ html {
     flex-direction: column; 
     justify-content: center;
     width: 100%;
-    min-height: 100%;
-    padding: 20px;
+    
+    padding: 40px 0 20px;
   }
   
   #formContent, .login_body, .signup_body {
@@ -153,6 +153,11 @@ html {
     border-radius: 0 0 10px 10px;
   }
   
+  .fas {
+      font-size: 60px;
+      padding: 0 0 15px;
+      color: #5fbae9;
+  }
   
   
   /* TABS */
