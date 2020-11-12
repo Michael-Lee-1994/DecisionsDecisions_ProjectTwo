@@ -39,7 +39,9 @@
     z-index: 2;
 }
 
-
+a:link {
+    text-decoration: none;
+}
 
 body {
     background-color: rgb(247, 247, 247);
@@ -97,9 +99,7 @@ h1 {
   background-color: mediumvioletred;
 }
 
-
 /* Everything below this is for the Log In and Sign Up pages animation. */
-
 
 /* BASIC */
 
@@ -128,8 +128,6 @@ html {
     margin: 40px 8px 10px 8px;
     color: #cccccc;
   }
-
-
 
   /* STRUCTURE */
 
@@ -165,8 +163,12 @@ html {
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
   }
-
-
+  
+  .fas {
+      font-size: 60px;
+      padding: 0 0 15px;
+      color: #5fbae9;
+  }
 
   /* TABS */
 
@@ -178,8 +180,6 @@ html {
     color: #0d0d0d;
     border-bottom: 2px solid #5fbae9;
   }
-
-
 
   /* FORM TYPOGRAPHY*/
 
@@ -246,9 +246,6 @@ html {
   input[type=text]:placeholder {
     color: #cccccc;
   }
-
-
-
 
   /* ANIMATIONS */
 
@@ -350,8 +347,6 @@ html {
   .underlineHover:hover:after{
     width: 100%;
   }
-
-
 
   /* OTHERS */
 

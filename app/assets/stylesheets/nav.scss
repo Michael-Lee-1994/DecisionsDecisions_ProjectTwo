@@ -8,7 +8,7 @@ header {
         list-style-type: none;
     }
 
-    a {
+    a, a:active, a:hover {
         text-decoration: none;
         font-weight: bold;
         color: white;
@@ -39,7 +39,7 @@ header {
     margin: 12px 15px 25px 0px;
 }
 
-#sign_up_btn:hover {
+#sign_up_btn:hover, #log_in_btn:hover {
     transition: color .15s ease-in-out,
     background-color .15s ease-in-out,
     border-color .15s ease-in-out,
