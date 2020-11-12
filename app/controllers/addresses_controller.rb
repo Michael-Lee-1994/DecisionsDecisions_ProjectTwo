@@ -19,9 +19,10 @@ class AddressesController < ApplicationController
     end
 
     def update
-        if @address.update(address_params)
+        if @address && @address.update(address_params)
             @current_user.update_attribute(:address, @address)
             redirect_to user_path(current_user)
+            flash[:success] = "Address successfully updated."
         else
             render 'edit'
         end
