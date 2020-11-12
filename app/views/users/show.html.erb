@@ -16,11 +16,19 @@
   <tr>
     <th>Choice Name</th>
     <th>Date</th>
+    <th>Completed?</th>
   </tr>
 <% @user.choices.each do |ch|%>
   <tr>
     <td><%=link_to ch.choice_name, ch %></td>
     <td><%=ch.date%></td>
+    <td>
+      <% if ch.completed == true %>
+          <%= "Yes" %>
+      <% else %>
+          <%= "No" %>
+      <% end %>
+    </td>
   </tr>
 <% end %>
 </table>

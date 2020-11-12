@@ -3,11 +3,6 @@ class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
     def index
-        # if params[:all]
-        #     @users = User.all
-        # else
-        #     @users = User.where(user_id: params[:user_id])
-        # end
         @users = User.all
     end
 
@@ -22,7 +17,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
-            redirect_to @user, notice: 'Account was successfully created.'
+            redirect_to @user
+            flash[:success] = 'Account was successfully created.'
         else
             render :new
         end
@@ -33,7 +29,8 @@ class UsersController < ApplicationController
 
     def update
         if @user.update(user_params)
-            redirect_to @user, notice: 'Account was successfully updated.'
+            flash[:success] = "Account was successfully updated."
+            redirect_to @user
         else
             render 'edit'
         end
@@ -41,7 +38,8 @@ class UsersController < ApplicationController
     
     def destroy
         @user.destroy
-        redirect_to login_path, notice: 'Account was successfully deleted.'
+        redirect_to login_path
+        flash[:success] = "Account was successfully deleted."
     end
 
     private 

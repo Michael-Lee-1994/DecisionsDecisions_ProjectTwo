@@ -30,6 +30,7 @@
 
 .success {
     color: green;
+    z-index: 2;
 }
 
 
