@@ -7,7 +7,7 @@ class AddressesController < ApplicationController
     def create
         @address = Address.new(address_params)
         if @address.save
-            @current_user.update_attribute(:address, @address)
+            current_user.update_attribute(:address, @address)
             redirect_to user_path(current_user)
             flash[:success] = "Address successfully added."
         else
@@ -20,7 +20,7 @@ class AddressesController < ApplicationController
 
     def update
         if @address && @address.update(address_params)
-            @current_user.update_attribute(:address, @address)
+            current_user.update_attribute(:address, @address)
             redirect_to user_path(current_user)
             flash[:success] = "Address successfully updated."
         else
