@@ -1,3 +1,7 @@
-<h1>Update choice status:</h1>
+<div id="update_choice_body">
+    <h1 id="update_status_header">Update choice status:</h1>
 
-<%= render 'form', choice: @choice %>
+    <%= render 'form', choice: @choice %>
+
+    <button class="back-to-user"><%=link_to "Back to Profile", user_path(current_user) %></button>
+</div>
