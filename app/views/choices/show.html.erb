@@ -27,16 +27,13 @@
                     <% else %>
                     <th>Movie name</th>
                 <% end %>
-              
                 <th>Category</th>
                 <% if c.activity.category == "food" %>
                     <th>Cuisine</th>
                     <% else %>
                     <th>Genre</th>
                 <% end %>
-              
                 <th>Completed?</th>
-
             </tr>
             <tr>
                 <td><%= c.activity.name.capitalize %></td>
@@ -50,5 +47,3 @@
     <br>
     <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
 </div>
-
-

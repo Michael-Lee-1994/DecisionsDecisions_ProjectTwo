@@ -1,7 +1,27 @@
 <div id="add_choice_body">
     <h1 class="page_header">Add a Choice</h1>
-    <%= render 'form', choice: @choice %>
+    <div class="form">
+<%= form_with model: @choice, local: true do |f| %>
+    <% if @choice.errors.any? %>
+        <ul>
+            <% @choice.errors.full_messages.each do |m|%>
+                <li class="danger"><%= m %></li>
+            <% end%>
+        </ul>
+    <% end %>
+    <%= f.label :choice_name, class:'form_label' %>
     <br>
-
-    <button class="btn btn-outline-warning" id='back_btn'><%=link_to "Back to Profile", user_path(current_user) %></button>
+    <%= f.text_field :choice_name %>
+    <br>
+    <%= f.label :date, class:'form_label' %>
+    <br>
+    <%= f.date_field :date %>
+    <br>
+    <%= f.label :location_zip, class:'form_label' %>
+    <br>
+    <%= f.text_field :location_zip %>
+    <br>
+    <%= f.submit class:"btn btn-primary mb-2", id:"create_choice"%>
+    <% end %>
+    <button class="btn btn-info"><%=link_to "Back to Profile", user_path(current_user) %></button>
 </div>

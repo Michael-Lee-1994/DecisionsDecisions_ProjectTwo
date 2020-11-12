@@ -24,7 +24,8 @@ class ChoicesController < ApplicationController
 
     def update
         @choice.update(choice_params)
-        redirect_to @choice, notice: 'Choice was successfully updated.'
+        redirect_to @choice
+        flash[:success] = 'Choice was successfully updated.'
     end
 
     private

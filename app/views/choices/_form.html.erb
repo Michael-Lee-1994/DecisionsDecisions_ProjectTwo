@@ -1,5 +1,3 @@
-
-
 <div class="form">
 <%= form_with model: choice, local: true do |f| %>
     <% if @choice.errors.any? %>
@@ -16,6 +14,10 @@
     <%= f.label :date, class:'form_label' %>
     <br>
     <%= f.date_field :date %>
+    <br>
+    <%= f.label :completed, class:'form_label' %>
+    <br>
+    <%= f.check_box :completed %>
     <br>
     <%= f.label :location_zip, class:'form_label' %>
     <br>
