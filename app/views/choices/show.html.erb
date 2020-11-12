@@ -3,28 +3,47 @@
 
     <table>
         <tr>
-            <th>Date</th>
-            <th>Category</th>
-            <th>Genre/Cuisine</th>
-            <th>Completed?</th>
+            <th scope="col">Date</th>
+            <th scope="col">Completed?</th>
         </tr>
-        <tr>
+        <tr class="table table-hover">
             <td><%=@choice.date%></td>
-            <% @choice.choice_activities.map do |c|%>
-                <td><%= c.activity.name.capitalize %></td>
-                <td><%= c.activity.category.capitalize %></td>
-                <td><%= c.activity.genre_cuisine.capitalize %></td>
-            <% end %>
-            <td>
+               <td>
             <% if @choice.completed == true %>
-                <input type="checkbox" checked>
+                <%= "Yes" %>
             <% else %>
-                <input type="checkbox">
+                <%= "No" %>
             <% end %>
             </td>
         </tr>
     </table>
 
-    <button><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
-    <button><%= link_to 'Back', user_path(current_user) %></button>
+    <table class="table table-hover table-sm">
+        <br>
+        <% @choice.choice_activities.map do |c|%>
+            <tr class="table-info">
+                <% if c.activity.category == "food" %>
+                    <th>Restaurant</th>
+                    <% else %>
+                    <th>Movie name</th>
+                <% end %>
+                <th>Category</th>
+                <% if c.activity.category == "food" %>
+                    <th>Cuisine</th>
+                    <% else %>
+                    <th>Genre</th>
+                <% end %>
+            </tr>
+            <tr>
+                <td><%= c.activity.name.capitalize %></td>
+                <td><%= c.activity.category.capitalize %></td>
+                <td><%= c.activity.genre_cuisine.capitalize %></td>
+            </tr>
+        <% end %>
+        
+    </table>
+    <br>
+    <button class="btn btn-dark" id="update_choice"><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
+    <br>
+    <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
 </div>
