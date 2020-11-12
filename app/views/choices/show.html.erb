@@ -27,12 +27,16 @@
                     <% else %>
                     <th>Movie name</th>
                 <% end %>
+              
                 <th>Category</th>
                 <% if c.activity.category == "food" %>
                     <th>Cuisine</th>
                     <% else %>
                     <th>Genre</th>
                 <% end %>
+              
+                <th>Completed?</th>
+
             </tr>
             <tr>
                 <td><%= c.activity.name.capitalize %></td>
@@ -40,7 +44,6 @@
                 <td><%= c.activity.genre_cuisine.capitalize %></td>
             </tr>
         <% end %>
-        
     </table>
     <br>
     <button class="btn btn-dark" id="update_choice"><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
