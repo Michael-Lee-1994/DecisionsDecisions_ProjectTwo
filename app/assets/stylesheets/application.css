@@ -20,6 +20,12 @@
     display: table;
 }
 
+.flash{
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+}
+
 .errors {
     color: red
 }
@@ -36,7 +42,7 @@
 
 body {
     background-color: rgb(247, 247, 247);
-
+    height: 100%;
 }
 
 h1 {
@@ -52,11 +58,11 @@ h1 {
     font-size: 50px;
     font-family: 'Knewave', cursive;
     font-color: rgb(36, 32, 31);
-
 }
+
 #landing_content {
     display: block;
-    margin-top: 120px;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;

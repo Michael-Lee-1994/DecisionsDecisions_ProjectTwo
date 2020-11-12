@@ -5,7 +5,7 @@ body {
     padding-top: 0px;
     margin-top: 0px;
     display: block;
-    
+    height: 100%
   }
 
 .form{
@@ -32,7 +32,7 @@ body {
 
 #main {
     height: 100%;
-    padding: 60px 45px 20px 360px;
+    padding: 60px 45px 20px 300px;
     background-color: #f1f1f1;
     margin: 0px;
     border-style: solid;
@@ -54,7 +54,7 @@ body {
 
   .sidenav header {
     margin-top: 45px;
-    padding-top: 10px;
+    padding-top: 20px;
     text-decoration: none;
     font-size: 50px;
     color: black;
@@ -71,47 +71,47 @@ body {
     font-family: Kalam;
   }
 
-  .sidenav ul {
-    padding-inline-start: 0px;
-    text-align: center;
-    margin-top: 60px;
-    text-decoration: none;
+.sidenav ul {
+  padding-inline-start: 0px;
+  text-align: center;
+  margin-top: 60px;
+  text-decoration: none;
+}
+
+.sidenav button:hover {
+  background-color: #0d4f35;
+  transition: color .15s ease-in-out,
+              background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out;
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -webkit-transition: all .25s;
   }
 
-  .sidenav button:hover {
-    background-color: #0d4f35;
-    transition: color .15s ease-in-out,
-                background-color .15s ease-in-out,
-                border-color .15s ease-in-out,
-                box-shadow .15s ease-in-out;
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -webkit-transition: all .25s;
-  }
+.btn {
+  background-color: #1f3229;
+  border-radius: 20px;
+}
 
-  .btn {
-    background-color: #1f3229;
-    border-radius: 20px;
-  }
+#user_welcome_name {
+  font-family: 'Abril Fatface', cursive;
+}
 
-  #user_welcome_name {
-    font-family: 'Abril Fatface', cursive;
-  }
-
-  #delete_account{
-    background-color: rgb(199, 21, 134);
-    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-    box-shadow: 0 10px 30px rgba(87, 173, 216, 0.605);
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
-    margin: 150px 20px 40px 10px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+#delete_account{
+  background-color: rgb(199, 21, 134);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 150px 20px 40px 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #make_choice_btn {
