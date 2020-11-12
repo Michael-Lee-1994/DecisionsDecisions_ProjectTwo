@@ -52,24 +52,24 @@ body {
     margin-right: auto;
   }
 
-  .sidenav header {
-    margin-top: 45px;
-    padding-top: 20px;
-    text-decoration: none;
-    font-size: 50px;
-    color: black;
-    display: block;
-    font-family: 'Knewave', cursive;
-    text-align:center;
-   }
-
-  .sidenav a {
-    padding: 8px;
-    font-size: 22px;
-    color: white;
-    display: block;
-    font-family: Kalam;
+.sidenav header {
+  margin-top: 45px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  font-family: 'Knewave', cursive;
+  text-align:center;
   }
+
+.sidenav a {
+  padding: 8px;
+  font-size: 22px;
+  color: white;
+  display: block;
+  font-family: Kalam;
+}
 
 .sidenav ul {
   padding-inline-start: 0px;
