@@ -1,7 +1,7 @@
 <div id="add_choice_body">
     <h1 class="page_header">Add a Choice</h1>
-
     <%= render 'form', choice: @choice %>
     <br>
-    <button class="btn btn-info"><%=link_to "Back to Profile", user_path(current_user) %></button>
+
+    <button class="btn btn-outline-warning" id='back_btn'><%=link_to "Back to Profile", user_path(current_user) %></button>
 </div>

@@ -1,3 +1,4 @@
+<div class="form">
 <%= form_with(model: user, local: true) do |f| %>
         <% if @user.errors.any? %>
         <ul>
@@ -7,7 +8,7 @@
         </ul>
         <% end %>
 
-    <div>
+   
         <%= f.text_field :first_name, placeholder: "First Name", :html => {:class => "fadeIn"} %>
         <%= f.text_field :last_name, placeholder: "Last Name", :html => {:class => "fadeIn"} %>
         <%= f.text_field :username, placeholder: "Username", :html => {:class => "fadeIn"} %>

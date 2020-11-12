@@ -1,4 +1,6 @@
-<div class="form-inline">
+
+
+<div class="form">
 <%= form_with model: choice, local: true do |f| %>
     <% if @choice.errors.any? %>
         <ul>
@@ -7,12 +9,18 @@
             <% end%>
         </ul>
     <% end %>
-    <%= f.label :choice_name %>
+    <%= f.label :choice_name, class:'form_label' %>
+    <br>
     <%= f.text_field :choice_name %>
-    <%= f.label :date %>
+    <br>
+    <%= f.label :date, class:'form_label' %>
+    <br>
     <%= f.date_field :date %>
-    <%= f.label :location_zip %>
+    <br>
+    <%= f.label :location_zip, class:'form_label' %>
+    <br>
     <%= f.text_field :location_zip %>
-    <%= f.submit class:"btn btn-primary mb-2"%>
+    <br>
+    <%= f.submit class:"btn btn-primary mb-2", id:"create_choice"%>
     <% end %>
 </div>
