@@ -3,5 +3,6 @@ class Activity < ApplicationRecord
     has_many :choices, through: :choice_activities
     ARR = ["food", "movie"]
 
+    validates :name, :genre_cuisine, presence: true
     validates :category, inclusion: {in: ARR}
 end

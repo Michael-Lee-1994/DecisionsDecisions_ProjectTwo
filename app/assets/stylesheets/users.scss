@@ -5,12 +5,34 @@ body {
     padding-top: 0px;
     margin-top: 0px;
     display: block;
-    height: 100vh;
+    height: 100%
   }
+
+.form{
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 45%;
+}
+
+#edit_user_body {
+  text-align: center;
+  padding-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  padding: 60px 60px 60px 60px;
+  background-color: #f1f1f1;
+  margin: 0px;
+  border-style: solid;
+  border-width: 0px 100px 0px 0px;
+  border-color: #004345;
+
+}
 
 #main {
     height: 100%;
-    padding: 60px 45px 20px 360px;
+    padding: 60px 45px 20px 300px;
     background-color: #f1f1f1;
     margin: 0px;
     border-style: solid;
@@ -20,54 +42,157 @@ body {
 
 .sidenav {
     height: 100%;
-    width: 300px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+    width: 280px;
+    position: absolute;
     left: 0;
     background-color: #bbe950;
     overflow-x: hidden;
-    padding-top: 40px;
-    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .sidenav header {
-    padding: 6px 8px 6px 8px;
-    text-decoration: none;
-    font-size: 50px;
-    color: black;
-    display: block;
-    font-family: 'Knewave', cursive;
-    text-align:center;
-   }
-
-  .sidenav a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: block;
-    font-family: Oswald;
+.sidenav header {
+  margin-top: 45px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  font-family: 'Knewave', cursive;
+  text-align:center;
   }
 
-  .sidenav button:hover {
-    background-color: #0d4f35;
-    transition: color .15s ease-in-out,
-                background-color .15s ease-in-out,
-                border-color .15s ease-in-out,
-                box-shadow .15s ease-in-out;
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -webkit-transition: all .25s;
+.sidenav a:link{
+  text-decoration: none;
+  padding: 8px;
+  font-size: 22px;
+  color: white;
+  display: block;
+  font-family: Kalam;
+}
+
+.sidenav ul {
+  padding-inline-start: 0px;
+  text-align: center;
+  margin-top: 5%;
+  text-decoration: none;
+}
+
+.sidenav button:hover {
+  text-decoration: none;
+  background-color: #0d4f35;
+  transition: color .15s ease-in-out,
+              background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out;
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -webkit-transition: all .25s;
   }
 
-  .btn {
-    background-color: #1f3229;
-    border-radius: 20px;
-  }
+.btn {
+  background-color: #1f3229;
+  border-radius: 20px;
+}
 
-  #user_welcome_name {
-    font-family: 'Abril Fatface', cursive;
-  }
+#user_welcome_name {
+  font-family: 'Abril Fatface', cursive;
+}
+
+#delete_account {
+  background-color: rgb(199, 21, 134);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 15% 10% 10% 10%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#add_address_btn{
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#make_choice_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit_account_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#make_address_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit_address_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit_user_header {
+  font-family: 'Abril Fatface', cursive;
+}
+
+#edit_address_btn {
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(87, 173, 216, 0.605);
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

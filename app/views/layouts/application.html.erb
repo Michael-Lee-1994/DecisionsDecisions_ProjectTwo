@@ -12,24 +12,34 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-   
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
     
     </head>
 
   <% flash.each do |k, v|  %>
+    <div class="flash">
     <p class="<%= k %>"><%= v %></p>
+    </div>
   <% end %>
 
+
+
   <% if logged_in? %>
-    <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
+    <header class='clearfix'>
+      <div class="left-nav">
+        <h1 id="welcome_header"><a href="<%= home_path %>">DECISIONS DECISIONS</a></h1>
+      </div>
+      <div>
+      <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
+      </div>
+    </header>
+     
   <% else%>
   <header class='clearfix'>
     <div class="left-nav">
-      <h1 id="welcome_header">DECISIONS DECISIONS</h1>
+      <h1 id="welcome_header"><a href="<%= home_path %>">DECISIONS DECISIONS</a></h1>
     </div>
     <div>
       <ul class="nav justify-content-end">
@@ -44,3 +54,5 @@
     <%= yield %>
   </body>
 </html>
+
+

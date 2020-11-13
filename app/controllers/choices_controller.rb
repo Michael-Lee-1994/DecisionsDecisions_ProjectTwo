@@ -1,6 +1,6 @@
 class ChoicesController < ApplicationController
-    before_action :get_choice, only: [:show, :edit, :update]
-
+    before_action :get_choice, only: [:show, :edit, :update, :destroy]
+    
     def show
         @choice = Choice.find(params[:id])
     end
@@ -24,7 +24,14 @@ class ChoicesController < ApplicationController
 
     def update
         @choice.update(choice_params)
-        redirect_to @choice, notice: 'Choice was successfully updated.'
+        redirect_to @choice
+        flash[:success] = 'Choice was successfully updated.'
+    end
+
+    def destroy
+        @choice.destroy
+        redirect_to current_user
+        flash[:success] = "Choice was successfully deleted."
     end
 
     private

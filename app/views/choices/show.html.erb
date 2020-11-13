@@ -1,27 +1,52 @@
-<h1><%= @choice.choice_name %></h1>
+<div id="choice_show_main">
+    <h1 id="choice_name_header"><%= @choice.choice_name %></h1>
 
-<table>
-    <tr>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Genre/Cuisine</th>
-        <th>Completed?</th>
-    </tr>
-    <tr>
-        <td><%=@choice.date%></td>
+    <table>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Completed?</th>
+        </tr>
+        <tr class="table table-hover">
+            <td><%=@choice.date%></td>
+               <td>
+            <% if @choice.completed == true %>
+                <%= "Yes" %>
+            <% else %>
+                <%= "No" %>
+            <% end %>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table table-hover table-sm">
+        <br>
         <% @choice.choice_activities.map do |c|%>
-            <td><%= c.activity.category.capitalize %></td>
-            <td><%= c.activity.genre_cuisine.capitalize %></td>
+            <tr class="table-info">
+                <% if c.activity.category == "food" %>
+                    <th>Food</th>
+                    <% else %>
+                    <th>Movie name</th>
+                <% end %>
+                <th>Category</th>
+                <% if c.activity.category == "food" %>
+                    <th>Cuisine</th>
+                    <% else %>
+                    <th>Genre</th>
+                <% end %>
+            </tr>
+            <tr>
+                <td><%= c.activity.name.capitalize %></td>
+                <td><%= c.activity.category.capitalize %></td>
+                <td><%= c.activity.genre_cuisine.capitalize %></td>
+            </tr>
         <% end %>
-        <td>
-        <% if @choice.completed == true %>
-            <input type="checkbox" checked>
-        <% else %>
-            <input type="checkbox">
-        <% end %>
-        </td>
-    </tr>
-</table>
-
-<button><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
-<button><%= link_to 'Back', user_path(current_user) %></button>
+    </table>
+    <br>
+    <button class="btn btn-dark" id="update_choice"><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
+    <br>
+    <button class="btn btn-dark" id="add_more_act"><%= link_to "Add Activities", activities_path %></button>
+    <br>
+    <%= button_to "Delete choice", choice_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_choice"%> 
+    <br>
+    <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
+</div>

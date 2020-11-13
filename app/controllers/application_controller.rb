@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user
+    helper_method :current_choice
     helper_method :logged_in?
     before_action :authorized
     skip_before_action :authorized, only: [:show]
