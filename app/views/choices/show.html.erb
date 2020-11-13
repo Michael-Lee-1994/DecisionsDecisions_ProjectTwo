@@ -23,7 +23,7 @@
         <% @choice.choice_activities.map do |c|%>
             <tr class="table-info">
                 <% if c.activity.category == "food" %>
-                    <th>Restaurant</th>
+                    <th>Food</th>
                     <% else %>
                     <th>Movie name</th>
                 <% end %>
@@ -33,7 +33,6 @@
                     <% else %>
                     <th>Genre</th>
                 <% end %>
-                <th>Completed?</th>
             </tr>
             <tr>
                 <td><%= c.activity.name.capitalize %></td>
@@ -44,6 +43,11 @@
     </table>
     <br>
     <button class="btn btn-dark" id="update_choice"><%= link_to "Update choice status", edit_choice_path(@choice) %></button>
+
+    <%= button_to "Add more activities", activities_path, method: :get%>
+
+    <%= button_to "Delete choice", choice_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_choice"%> 
+
     <br>
     <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
 </div>
