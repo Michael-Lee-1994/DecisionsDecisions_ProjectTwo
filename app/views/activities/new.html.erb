@@ -1,10 +1,10 @@
 <div id="add_actv_body">
     <h1 class="page_header">Add a new 
-        <% if params[:foooooood] %>
-            food
-        <% else%>
-            movie
-        <% end %>
+    <% if params[:fooood] %> 
+        food
+    <% else %>
+        movie
+    <% end %>
     </h1>
     <%= render 'form', activity: @activity %>
 </div>

@@ -1,7 +1,7 @@
 <h1>Add activities: </h1>
 
-<%= button_to "Add food", new_activity_path, method: :get, name: :foooooood%>
-<%= button_to "Add movie", new_activity_path, method: :get, name: :movieee%>
+<%= button_to "Add food", new_activity_path, method: :get, name: :fooood%>
+<%= button_to "Add movie", new_activity_path, method: :get, name: :mooobie%>
 <%= button_to "Add random food", activities_path, method: :post, name: :food %>
 <%= button_to "Add random movie", activities_path, method: :post, name: :movie%>
-<button class="btn btn-dark"><%= link_to 'Done', choice_path(current_choice) %></button>
+<button class="btn btn-dark"><%= link_to 'Done', user_path(current_user) %></button>
