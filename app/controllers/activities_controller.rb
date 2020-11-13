@@ -29,6 +29,14 @@ class ActivitiesController < ApplicationController
             else
                 render :new
             end
+        elsif params[:restaurant]
+            @activity = current_choice.choice_activities.create(activity_id: get_random("restaurant").id)
+            if @activity.save
+                redirect_to activities_path
+                flash[:success] = "Succesfully added #{@activity.activity.name}"
+            else
+                render :new
+            end
         else
             @activity = current_choice.activities.create(activity_params)
             if @activity.save
@@ -52,6 +60,8 @@ class ActivitiesController < ApplicationController
             activity = Activity.where("category LIKE ?", "food").sample
         elsif type == "movie"
             activity = Activity.where("category LIKE ?", "movie").sample
+        elsif type == "restaurant"
+            activity = Activity.where("category LIKE ?", "restaurant").sample
         else
             activity = Activity.find(Random.new(100))
         end 
