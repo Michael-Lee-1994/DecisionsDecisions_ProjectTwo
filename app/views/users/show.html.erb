@@ -1,18 +1,18 @@
 <nav id="navbar" class="sidenav"> 
-    <header> DECISIONS DECISIONS </header>
+    <a href="<%= home_path %>"><header> DECISIONS DECISIONS </header></a>
     <br>
     <ul>
       <button class="btn btn-dark" id="make_choice_btn"><%=link_to "Make a choice", new_choice_path %></button>
 
       <button class="btn btn-dark" id="edit_account_btn"><%= link_to "Edit account", edit_user_path(@user) %></button>
 
-      <button class="btn btn-dark"><%= link_to "Add Address", new_address_path %></button><br>
+      <button class="btn btn-dark" id="add_address_btn"><%= link_to "Add Address", new_address_path %></button><br>
       
     <% if @user.address %>
-      <button class="btn btn-dark"><%= link_to "Edit an Address", edit_address_path(@user.address_id) %></button>
+      <button class="btn btn-dark" id="edit_address_btn"><%= link_to "Edit an Address", edit_address_path(@user.address_id) %></button>
     <% end %>
 
-      <%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_account"%>      
+    <%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_account"%>      
     </ul>
 </nav>
 

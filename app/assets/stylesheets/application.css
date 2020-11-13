@@ -65,7 +65,7 @@ h1 {
 
 #landing_content {
     display: block;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -136,7 +136,8 @@ html {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 100%;  
+    width: 100%;
+    min-height: 70%;
     padding: 0px;
   }
 
