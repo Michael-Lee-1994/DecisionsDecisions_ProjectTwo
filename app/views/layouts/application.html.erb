@@ -23,9 +23,14 @@
     <p class="<%= k %>"><%= v %></p>
     </div>
   <% end %>
-
+  
   <% if logged_in? %>
+  
+    <div>
     <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
+    </div>
+  
+    
   <% else%>
   <header class='clearfix'>
     <div class="left-nav">
