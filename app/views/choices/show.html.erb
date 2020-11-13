@@ -24,14 +24,18 @@
             <tr class="table-info">
                 <% if c.activity.category == "food" %>
                     <th>Food</th>
-                    <% else %>
+                    <% elsif c.activity.category == "movie"%>
                     <th>Movie name</th>
+                    <% else %>
+                    <th>Restaurant name</th>
                 <% end %>
                 <th>Category</th>
-                <% if c.activity.category == "food" %>
+                <% if c.activity.category == "food"%>
                     <th>Cuisine</th>
-                    <% else %>
+                    <% elsif c.activity.category == "movie" %>
                     <th>Genre</th>
+                    <% else %>
+                    <th>Type</th>
                 <% end %>
             </tr>
             <tr>

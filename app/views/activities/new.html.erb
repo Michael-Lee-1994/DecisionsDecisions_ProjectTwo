@@ -2,8 +2,10 @@
     <h1 class="page_header">Add a new 
     <% if params[:fooood] %> 
         food
-    <% else %>
+    <% elsif params[:mooobie] %>
         movie
+    <% else %>
+        restaurant
     <% end %>
     </h1>
     <%= render 'form', activity: @activity %>
