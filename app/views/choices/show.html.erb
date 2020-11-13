@@ -49,5 +49,7 @@
     <%= button_to "Delete choice", choice_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_choice"%> 
 
     <br>
+    <button class="btn btn-dark" id="add_more_act"><%= link_to "Add Activities", activities_path %></button>
+    <br>
     <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
 </div>
