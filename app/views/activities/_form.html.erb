@@ -16,7 +16,11 @@
         <br>
         <%= f.text_field :category %>
         <br>
-        <%= f.label :genre_cuisine %>
+        <% if params[:fooood] %>
+            <%= f.label :cuisine %>
+        <% else %>
+            <%= f.label :genre %>
+        <% end %>
         <br>
         <%= f.text_field :genre_cuisine %>
         <br>
