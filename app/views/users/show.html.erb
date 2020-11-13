@@ -12,7 +12,7 @@
       <button class="btn btn-dark"><%= link_to "Edit an Address", edit_address_path(@user.address_id) %></button>
     <% end %>
 
-      <%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_account"%>      
+    <%= button_to "Delete account", user_path, method: :delete, data: { confirm: 'Are you sure about this?' }, class:"btn btn-dark", id:"delete_account"%>      
     </ul>
 </nav>
 
