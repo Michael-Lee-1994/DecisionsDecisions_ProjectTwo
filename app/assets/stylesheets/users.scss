@@ -43,8 +43,7 @@ body {
 .sidenav {
     height: 100%;
     width: 280px;
-    position: absolute;
-    top: 0;
+    position: fixed;
     left: 0;
     background-color: #bbe950;
     overflow-x: hidden;

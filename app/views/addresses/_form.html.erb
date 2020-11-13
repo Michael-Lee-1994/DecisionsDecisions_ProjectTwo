@@ -1,11 +1,11 @@
 <div class="form">
   <%= form_with(model: address, local: true) do |f| %>
         <% if address.errors.any? %>
-        <ul>
-            <% address.errors.full_messages.each do |m| %>
-                <li class="errors"><%= m %></li>
-            <% end %>
-        </ul>
+          <ul>
+              <% address.errors.full_messages.each do |m| %>
+                  <li class="errors"><%= m %></li>
+              <% end %>
+          </ul>
         <% end %>
       <div>
         <%= f.label :street_name%><br>
@@ -20,7 +20,7 @@
         <%= f.text_field :country %><br>
       </div>
 
-    <div class="actions">
+  <div class="actions">
     <%= f.submit %>
     <br>
     <button class="back-to-user"><%=link_to "Back to Profile", user_path(current_user) %></button>
