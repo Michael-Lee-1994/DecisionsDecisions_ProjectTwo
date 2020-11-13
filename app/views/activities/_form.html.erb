@@ -16,12 +16,16 @@
         <br>
         <%= f.text_field :category %>
         <br>
-        <%= f.label :genre_cuisine %>
+        <% if params[:foooooood]%>
+            <%= f.label :cuisine %>
+        <% else %>
+            <%= f.label :genre %>
+        <% end %>
         <br>
         <%= f.text_field :genre_cuisine %>
         <br>
   
         <%= f.submit %>
     <% end %>
-    <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', user_path(current_user) %></button>
+    <button class="btn btn-dark" id="back_to_user"><%= link_to 'Back', choice_path(current_choice) %></button>
 </div>
