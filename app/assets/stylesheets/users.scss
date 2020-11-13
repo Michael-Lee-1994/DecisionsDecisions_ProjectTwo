@@ -62,7 +62,8 @@ body {
   text-align:center;
   }
 
-.sidenav a {
+.sidenav a:link{
+  text-decoration: none;
   padding: 8px;
   font-size: 22px;
   color: white;
