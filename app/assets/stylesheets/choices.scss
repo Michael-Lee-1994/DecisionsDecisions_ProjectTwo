@@ -14,12 +14,12 @@
 table{
     width: 100%;
     text-align: center;
-    overflow:scroll;
-    height:100px;
+    table-layout: fixed;
 }
 
 .table-info {
     width: fit-content;
+    overflow: scroll;
     
 }
 .back-to-user {
