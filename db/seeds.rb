@@ -16,7 +16,7 @@ PASS = ["password"]
 end
 
 
-MOVIE_GEN = ["romance", "comedy", "tragedy", "horror"]
+MOVIE_GEN = ["romance", "comedy", "tragedy", "horror", "thrilling", "anime"]
 
 100.times do
     temp = rand(0..1)
