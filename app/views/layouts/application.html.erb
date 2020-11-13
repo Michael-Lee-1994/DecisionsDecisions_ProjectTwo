@@ -25,14 +25,11 @@
   <% end %>
   
   <% if logged_in? %>
-  <header class='clearfix'>
-    <div class="left-nav">
-      <h1 id="welcome_header"><a href="<%= home_path %>">DECISIONS DECISIONS</a></h1>
-    </div>
+  
     <div>
     <%= button_to 'Logout', sessions_path, method: :delete, class:"btn btn-outline-warning", id:'logout_btn'%>
     </div>
-  </header>
+  
     
   <% else%>
   <header class='clearfix'>
