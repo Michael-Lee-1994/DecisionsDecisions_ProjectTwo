@@ -136,8 +136,7 @@ html {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    min-height: 100%;
+    width: 100%;  
     padding: 0px;
   }
 
@@ -359,8 +358,11 @@ html {
   }
 
   #foot-note {
+    margin: 20px 0 0 0;
+    background-color: rgb(149, 181, 54);
     font-size: 12px;
     line-height: 3px;
     text-align: center;
-    margin: 350px -15px -20px -10px;
+    width: 100%;
+    padding: 100px 15px 15px 15px;
   }
